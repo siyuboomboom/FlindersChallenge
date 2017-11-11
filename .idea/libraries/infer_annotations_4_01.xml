@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="infer-annotations-4.01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.49.3/jars/libs/infer-annotations-4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

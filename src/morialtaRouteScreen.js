@@ -109,7 +109,7 @@ class morialtaRouteScreen extends Component {
       });
     }
     else {
-      timer.setInterval("timerInterval", this.startJourney.bind(this), 10000); //update per 10s
+      timer.setInterval("timerInterval", this.startJourney.bind(this), 30000); //update per 10s
       this.setState({
         isStarted: true,
       });

@@ -1,10 +1,12 @@
+import { Dimensions } from 'react-native'
+
 const React = require('react-native')
 const {StyleSheet} = React
 const constants = {
   actionColor: '#24CE84'
 };
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   map: {
     flex:1
   },
@@ -12,8 +14,60 @@ var styles = StyleSheet.create({
     backgroundColor: '#f2f2f2',
     flex: 1,
   },
+  aniview: {
+    paddingTop: 300,
+  },
+  text: {
+    color: 'white',
+    fontSize: 35,
+    textAlign: 'center',
+    margin: 10,
+    lineHeight: 50,
+    backgroundColor: 'transparent',
+    fontWeight: 'bold',
+    fontFamily: 'Futura',
+    textShadowColor: 'rgba(0, 0, 0, 0.70)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+  },
+  home: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+
+	},
+  homebutton: {
+    width: '40%',
+    height: 40,
+  },
+  absolute: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
+  bg: {
+    borderBottomColor: '#fff',
+    borderBottomWidth: 1.25,
+    alignItems: 'center',
+    height: 126,
+  },
+  img: {
+    flex: 1,
+    alignSelf: 'stretch',
+    width: null,
+  },
   listview: {
     flex: 1,
+  },
+  button: {
+    width: 123,
+    height: 50
+  },
+  homebutton: {
+    width: 225,
+    height: 50
   },
   li: {
     backgroundColor: '#fff',
@@ -49,10 +103,6 @@ var styles = StyleSheet.create({
     color: '#444',
     fontSize: 16,
     fontWeight: "500"
-  },
-  statusbar: {
-    backgroundColor: '#fff',
-    height: 22,
   },
   center: {
     textAlign: 'center',

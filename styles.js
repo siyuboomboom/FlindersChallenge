@@ -125,6 +125,25 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 25,
   },
+  markerWrap: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  marker: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: "rgba(65, 132, 244, 0.9)",
+  },
+  ring: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255, 0.9)",
+    position: "absolute",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255, 0.9)",
+  },
 })
 
 module.exports = styles

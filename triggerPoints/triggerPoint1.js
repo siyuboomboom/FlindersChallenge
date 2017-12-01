@@ -33,6 +33,10 @@ var Points = [
       longitude: 138.60003,
       notification: "Victoria Square"
     },
+    { latitude: -34.9279431,
+      longitude: 138.6012572,
+      notification: "CMUA"
+    },
     { latitude: Coor.coor.polylines[0].coordinates[0].latitude,
       longitude: Coor.coor.polylines[0].coordinates[0].longitude,
       notification: "Fence 1"

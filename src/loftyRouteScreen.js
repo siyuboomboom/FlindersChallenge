@@ -61,6 +61,11 @@ class loftyRouteScreen extends Component {
     timer.setInterval("intervalID", this.updatePosition.bind(this), locatingInterval);
   }
 
+  componentWillMount() {
+    this.index = 0;
+    this.animation = new Animated.Value(0);
+  }
+
   updatePosition() {
     this.watchId = navigator.geolocation.watchPosition(
       (data) => {
@@ -84,7 +89,7 @@ class loftyRouteScreen extends Component {
       });
     }
     else {
-      timer.setInterval("timerInterval", this.startJourney.bind(this), 30000); //millisenconds
+      timer.setInterval("timerInterval", this.startJourney.bind(this), alertInterval); //millisenconds
       this.setState({
         isStarted: true,
       });
@@ -126,8 +131,21 @@ class loftyRouteScreen extends Component {
             coordinate={marker.latlng}
             title={marker.title}
             description={marker.description}
+            >
+              <Animated.View style={[styles.markerWrap]}>
+                <Animated.View style={[styles.ring]} />
+                <View style={styles.marker} />
+              </Animated.View>
+            </MapView.Marker>
+          ))}
+
+          {centerPoints.map(marker => (
+            <MapView.Marker
+            coordinate={marker}
+            title={marker.notification}
             />
           ))}
+
           {polylines.map(polyline => (
             <MapView.Polyline
               key={polyline.id}
@@ -137,14 +155,7 @@ class loftyRouteScreen extends Component {
               strokeWidth={2}
             />
           ))}
-          {centerPoints.map( x => (
-            <MapView.Circle
-              center={x}
-              radius={ radius }
-              strokeColor='transparent'
-              fillColor="rgba(0, 0, 0, 0.2)"
-            />
-          ))}
+
         </MapView>
       </View>
     );
